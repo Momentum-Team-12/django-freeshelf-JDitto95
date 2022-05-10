@@ -20,4 +20,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('accounts/', include('registration.backends.simple.urls'),),
     path('', books_views.list_books, name='list_books' ),
+    path('books/<slug:slug>', books_views.books_by_category, name='category')
 ]

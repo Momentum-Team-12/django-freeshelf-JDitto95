@@ -2,4 +2,9 @@
 
 {% block content %}
 <h1> BookShelf</h1>
+{% for book in books %}
+<h2>{{book.title}}</h2>
+<h2>{{book.author}}</h2>
+<h2>{{book.description}}</h2>
+{% endfor %}
 {% endblock %}
