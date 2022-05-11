@@ -11,6 +11,9 @@
     <p>{{book.author}}</p>
     <h2>Description</h2> 
     <p>{{book.description}}</p>
+    <form action='{% url add_favorite, pk=pk'
+    {% csrf_token %}
+    {{form.as_p}}
 </div>
 <a href="{% url 'list_books' %}">Home Page</a>
 <button type='submit'>Favorite</button>

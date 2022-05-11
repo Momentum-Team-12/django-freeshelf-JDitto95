@@ -16,7 +16,7 @@ class Book(models.Model):
     description = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey('Category', related_name='books', on_delete=models.CASCADE, null=True, blank=True)
-
+    # image = models.ImageField
     def __str__(self):
         return self.title    
 class Category(models.Model):
@@ -37,4 +37,5 @@ class Category(models.Model):
 class Favorite(models.Model):
     book = models.ForeignKey('Book', related_name='favorites',on_delete= models.CASCADE)
     user = models.ForeignKey('User', related_name='favorites', on_delete= models.CASCADE)
-        
+
+

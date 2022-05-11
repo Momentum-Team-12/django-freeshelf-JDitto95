@@ -1,5 +1,5 @@
 from django import forms
-from .models import Book
+from .models import Book, Favorite 
 
 
 class BookForm(forms.ModelForm):
@@ -9,4 +9,13 @@ class BookForm(forms.ModelForm):
             'title',
             'author',
             'description',
+    
+        ]
+        
+        
+class FavoriteForm(forms.ModelForm):
+    class Meta:
+        model = Favorite
+        fields = [
+            
         ]
