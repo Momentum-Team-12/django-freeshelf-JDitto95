@@ -3,6 +3,11 @@
 {% block content %}
 
 <h1>Book Detail</h1>
-    <h2>{{book.title}}</h2>
-    <h3>{{book.author}}</h3>
+<a href="{% url 'list_books' %}">Home Page</a>
+    <h2>Title</h2> 
+        <p>{{book.title}}</p>
+    <h2>Author</h2> 
+    <p>{{book.author}}</p>
+    <h2>Description</h2> 
+    <p>{{book.description}}</p>
 {% endblock%}
