@@ -3,11 +3,15 @@
 {% block content %}
 
 <h1>Book Detail</h1>
-<a href="{% url 'list_books' %}">Home Page</a>
+
+<div>
     <h2>Title</h2> 
-        <p>{{book.title}}</p>
+    <p>{{book.title}}</p>
     <h2>Author</h2> 
     <p>{{book.author}}</p>
     <h2>Description</h2> 
     <p>{{book.description}}</p>
+</div>
+<a href="{% url 'list_books' %}">Home Page</a>
+<button type='submit'>Favorite</button>
 {% endblock%}

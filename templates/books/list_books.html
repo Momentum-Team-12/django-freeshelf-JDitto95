@@ -2,9 +2,13 @@
 
 {% block content %}
 <h1> BookShelf</h1>
+
+<div>
 {% for book in books %}
 <h2>{{book.author}}</h2>
 <h2>{{book.title}}</h2>
-<h2>{{book.description}}</h2>
+<h2>{{book.created_at}}</h2>
+<a href="{% url 'book_detail' book.pk %}">More Information</a>
+</div>
 {% endfor %}
 {% endblock %}
